@@ -4,15 +4,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_prelim"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/p"
             android:title="Prelim" />
         <item
             android:id="@+id/nav_midterm"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/m"
             android:title="Midterm" />
         <item
             android:id="@+id/nav_finals"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/f"
             android:title="Finals" />
         <item
             android:id="@+id/nav_videos"
@@ -20,16 +20,16 @@
             android:title="Videos" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="More Information">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+            android:id="@+id/about"
+            android:icon="@drawable/ic_menu_share"
+            android:title="About Us" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/subjectAbout"
+                android:icon="@drawable/ic_menu_share"
+                android:title="About the Subject" />
         </menu>
     </item>
 

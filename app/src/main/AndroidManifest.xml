@@ -29,10 +29,19 @@
         <activity
             android:name=".Videos"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".Quiz" />
         <activity
-            android:name=".Quiz"
+            android:name=".QuizResult"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".QuizResult"></activity>
+        <activity
+            android:name=".Lesson1"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AboutUs"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".AboutSubject"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>

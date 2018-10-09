@@ -32,12 +32,13 @@ public class MainActivity extends AppCompatActivity
 
     TextView termTextView;
     ListView lessonList;
+    ListView selL;
     ArrayAdapter arrayAdapter;
 
     ArrayList prelimLessons;
     ArrayList midtermLessons;
     ArrayList finalsLessons;
-    ArrayList videos;
+    ArrayList videos, sel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,24 +50,37 @@ public class MainActivity extends AppCompatActivity
         midtermLessons = new ArrayList<String>();
         finalsLessons = new ArrayList<String>();
         videos = new ArrayList<String>();
+        sel = new ArrayList<String>();
 
-        prelimLessons.add("Lesson 1");
-        prelimLessons.add("Lesson 2");
-        prelimLessons.add("Lesson 3");
+        sel.add("Please select a term in the navigation bar.");
+
+        prelimLessons.add("Lesson 1: Fundamental Positions of the Arms and Feet");
+        prelimLessons.add("Lesson 2: Basic Terminologies and Steps in Folk Dances");
+        prelimLessons.add("Lesson 3: TIKLOS");
+        prelimLessons.add("Lesson 4: CARIÑOSA");
         prelimLessons.add("Prelim Quiz");
 
-        midtermLessons.add("Lesson 1");
-        midtermLessons.add("Lesson 2");
-        midtermLessons.add("Lesson 3");
-        midtermLessons.add("Lesson 4");
+        midtermLessons.add("Lesson 1: CHA CHA CHA");
+        midtermLessons.add("Lesson 2: SWING");
+        midtermLessons.add("Lesson 3: REGGAE");
         midtermLessons.add("Midterm Quiz");
 
-        finalsLessons.add("Lesson 1");
-        finalsLessons.add("Lesson 2");
+        finalsLessons.add("Lesson 1: LINE DANCE");
+        finalsLessons.add("Lesson 2: INTERPRETATIVE DANCE");
+        finalsLessons.add("Lesson 3: HIP HOP");
         finalsLessons.add("Finals Quiz");
 
-        videos.add("Video 1");
-        videos.add("Video 2");
+        videos.add("LA-WALK");
+        videos.add("CARIÑOSA");
+        videos.add("CHA CHA CHA");
+        videos.add("TIKLOS");
+        videos.add("SWING");
+        videos.add("REGGAE");
+        videos.add("INTERPRETATIVE DANCE");
+        videos.add("HIPHOP");
+
+
+
 
         termTextView = (TextView) findViewById(R.id.term);
         lessonList = (ListView) findViewById(R.id.lessonList);
@@ -103,21 +117,6 @@ public class MainActivity extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     public void displayTerm(final String term, final ArrayList<String> lesson){
@@ -169,10 +168,12 @@ public class MainActivity extends AppCompatActivity
                 }
             });
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.about) {
+            Intent about = new Intent(getApplicationContext(), AboutUs.class);
+            startActivity(about);
+        } else if(id == R.id.subjectAbout){
+            Intent subj = new Intent(getApplicationContext(), AboutSubject.class);
+            startActivity(subj);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
